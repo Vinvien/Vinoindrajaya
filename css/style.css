@@ -1,0 +1,67 @@
+:root{
+  --paper:#EEF2F6; --ink:#0F1E33; --muted:#566478; --line:#CBD5E1;
+  --accent:#2F5BFF; --accent-ink:#fff; --soft:#DDE5EF;
+  --head:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Instrument Sans", "Segoe UI", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+.brand{font-family:var(--head);font-weight:700;text-decoration:none}
+nav a{margin-left:1.5rem;text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--accent)}
+
+.hero{padding:5rem 0 4rem}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.8rem,9vw,6.5rem);line-height:.98;letter-spacing:-.035em;max-width:14ch}
+.hero p{margin-top:1.75rem;max-width:34rem;color:var(--muted);font-size:1.2rem}
+.cta{display:inline-block;margin-top:2rem;padding:.8rem 1.4rem;background:var(--accent);color:var(--accent-ink);border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-family:var(--head);font-size:1.9rem;letter-spacing:-.02em;margin-bottom:2rem}
+
+.project{display:grid;grid-template-columns:5rem 1fr auto;gap:1rem 1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.project:first-of-type{border-top:1px solid var(--line)}
+.project time{color:var(--muted);font-variant-numeric:tabular-nums}
+.project h3{font-family:var(--head);font-size:1.4rem;letter-spacing:-.01em}
+.project h3 a{text-decoration:none}
+.project h3 a:hover{color:var(--accent);text-decoration:underline}
+.project p{color:var(--muted);margin-top:.25rem;max-width:36rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.75rem}
+.tags span{background:var(--soft);padding:.1rem .7rem;border-radius:999px;font-size:.88rem}
+.project .go{font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
+
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem}
+.about p+p{margin-top:1rem}
+.skills{list-style:none}
+.skills li{padding:.6rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.skills li span{color:var(--muted)}
+
+.contact p{max-width:32rem;color:var(--muted)}
+.mail{display:inline-block;margin-top:1rem;font-family:var(--head);font-weight:700;font-size:clamp(1.4rem,5vw,2.4rem);color:var(--accent);text-decoration:none;word-break:break-all}
+.mail:hover{text-decoration:underline}
+.social{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
+
+footer{padding:2.5rem 0;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+
+@media (max-width:640px){
+  nav a{margin-left:1rem}
+  .hero{padding:3rem 0 2.5rem}
+  .project{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:2rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Tambahan multi-halaman */
+nav a[aria-current="page"]{color:var(--accent);font-weight:600}
+.page-title{padding:3rem 0 2rem}
+.page-title h1{font-family:var(--head);font-weight:800;font-size:clamp(2.2rem,7vw,4rem);letter-spacing:-.03em;line-height:1.05}
+.page-title p{margin-top:1rem;color:var(--muted);max-width:34rem}
+.more{display:inline-block;margin-top:1.5rem;font-weight:600;color:var(--accent);text-decoration:none}
+.more:hover{text-decoration:underline}
+section.first{border-top:0;padding-top:1rem}
